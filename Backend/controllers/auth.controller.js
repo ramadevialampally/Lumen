@@ -81,8 +81,8 @@ export const signup = async (req, res) => {
 
     // Whitelist roles allowed for public signup:
     // allow customers and vendors to self-register, but not admins.
-    const publicAllowedRoles = ["customer", "vendor"];
-    let finalRole = "customer"; // default
+    const publicAllowedRoles = ["user", "admin"];
+    let finalRole = "user"; // default
 
     if (role) {
       const requested = String(role).toLowerCase();
